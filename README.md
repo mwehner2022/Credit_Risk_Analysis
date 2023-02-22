@@ -18,7 +18,7 @@ First, imbalanced-learn and the scikit-learn libraries were used to create three
 
 In Random Oversampling, data points of the minority class are randomly selected and added to the training set until the majority and minority classes are equal.
 
-####Random oversampling result:
+#### Random oversampling result:
 - Balanced accuracy scores: .67
 - Precision and: High Risk: .01 and Low Risk: .74
 - Recall scores: High Risk 1 and Low Risk: 61
@@ -27,7 +27,7 @@ In Random Oversampling, data points of the minority class are randomly selected 
 
 The Synthetic minority oversampling technique (SMOTE) is another oversampling approach. In SMOTE the size of the minority is increased by interpolating data points and adding those values to the minority class until it is balanced with the majority. 
 
-####SMOTE oversampling result:
+#### SMOTE oversampling result:
 - Balanced accuracy scores: .66
 - Precision and: High Risk: .01 and Low Risk: .63
 - Recall scores: High Risk: 1 and Low Risk: .69
@@ -36,7 +36,7 @@ The Synthetic minority oversampling technique (SMOTE) is another oversampling ap
 
 Cluster centroid is similar to SMOTE, however it is a form of undersampling. The algorithm identifies clusters of the majority class, called centroids, then chooses data points that are representative of the clusters. The majority class is reduced to the size of the minority class in this way.
 
-####Undersampling with Cluster Centroids result:
+#### Undersampling with Cluster Centroids result:
 - Balanced accuracy scores: .54
 - Precision and: High Risk: .01 and Low Risk: .69
 - Recall scores: High Risk: 1 and Low Risk: .4
@@ -47,7 +47,7 @@ Next a combinatorial approach of over- and undersampling with the SMOTEENN algor
 
 SMOTEENN is a combination of both oversampling and undersampling. First the minority class is oversampled with SMOTE. However, the data can be greatly impacted by outliers so an undersampling step is added, removing some of each class's outliers from the dataset. Create more distinct classes.
 
-####Combination sampling with SMOTEENN result:
+#### Combination sampling with SMOTEENN result:
 - Balanced accuracy scores: .64
 - Precision and: High Risk: .01 and Low Risk: .72
 - Recall scores: High Risk: 1 and Low Risk: .57
@@ -58,7 +58,7 @@ Lastly, the imblearn.ensemble library was used to train and compare two differen
 
 In BalancedRandomForestClassifer, a random forest algorithm samples the data and builds multiple smaller decision trees. Each tree is built from a random subset of features making it simple and weaker, however they can be combined to create a strong learner.
 
-####BalancedRandomForestClassifier result:
+#### BalancedRandomForestClassifier result:
 - Balanced accuracy scores: .79
 - Precision and: High Risk: .03 and Low Risk: .7
 - Recall scores: High Risk: 1 and Low Risk: .87
@@ -67,7 +67,7 @@ In BalancedRandomForestClassifer, a random forest algorithm samples the data and
 
 In EasyEnsembleClassifier, the algorithm applies random under-sampling. The method iteratively selects a random subset and makes an ensemble of the different sets.
 
-####EasyEnsembleClassifier result:
+#### EasyEnsembleClassifier result:
 - Balanced accuracy scores: .93
 - Precision and: High Risk: .09 and Low Risk: .92
 - Recall scores: High Risk: 1 and Low Risk: .94
